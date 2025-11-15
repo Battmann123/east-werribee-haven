@@ -386,7 +386,14 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-background/20 pt-8 text-center opacity-80">
-            <p>&copy; 2025 House And Land Packages Pty Ltd</p>
+            <div className="flex flex-wrap justify-center gap-2 mb-3">
+              <a href="#" onClick={handleContactClick} className="hover:opacity-100 transition-opacity">Terms of Use</a>
+              <span>|</span>
+              <a href="#" onClick={handleContactClick} className="hover:opacity-100 transition-opacity">Privacy Policy</a>
+              <span>|</span>
+              <a href="#" onClick={handleContactClick} className="hover:opacity-100 transition-opacity">Contact Us</a>
+            </div>
+            <p>2025 &copy; House And Land Packages Pty Ltd</p>
           </div>
         </div>
       </footer>
