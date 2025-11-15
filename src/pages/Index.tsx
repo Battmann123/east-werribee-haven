@@ -386,7 +386,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-background/20 pt-8 text-center opacity-80">
-            <p>House And Land Packages Pty Ltd | 2025 East Werribee. Victoria's Premier Growth Corridor.</p>
+            <p>&copy; 2025 House And Land Packages Pty Ltd</p>
           </div>
         </div>
       </footer>
