@@ -443,6 +443,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <p className="opacity-80 mb-2">
+                Level 14/333 Collins St<br />
+                Melbourne VIC 3000
+              </p>
+              <p className="opacity-80 mb-2">
                 <a href="mailto:info@halp.com.au" className="hover:opacity-100 transition-opacity">
                   info@halp.com.au
                 </a>
