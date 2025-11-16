@@ -6,6 +6,9 @@ import heroImage from "@/assets/hero-east-werribee.jpg";
 import landEstatesImage from "@/assets/land-estates.jpg";
 import buildersImage from "@/assets/builders.jpg";
 import commercialImage from "@/assets/commercial.jpg";
+import renderAerialView from "@/assets/render-aerial-view.png";
+import renderMasterPlan from "@/assets/render-master-plan.png";
+import renderPrecinctView from "@/assets/render-precinct-view.png";
 
 const Index = () => {
   const handleContactClick = () => {
@@ -100,6 +103,76 @@ const Index = () => {
                 <Trees className="w-12 h-12 text-secondary mb-4" />
                 <h3 className="font-semibold text-lg mb-2">Green Spaces</h3>
                 <p className="text-muted-foreground text-sm">Parks and recreational areas</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Development Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+              <MapPin className="w-4 h-4" />
+              <span className="text-sm font-medium">Master Planned Precinct</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              The Vision for East Werribee
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Explore the carefully designed master plan showcasing Victoria's most ambitious 
+              mixed-use development with modern infrastructure and sustainable design.
+            </p>
+          </div>
+
+          <div className="grid gap-8">
+            {/* Main Featured Render */}
+            <Card className="overflow-hidden hover:shadow-2xl transition-all">
+              <img 
+                src={renderAerialView} 
+                alt="East Werribee aerial development render showing modern architecture with Melbourne CBD skyline"
+                className="w-full h-[600px] object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-3 text-foreground">Modern Living Meets Natural Beauty</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Experience the perfect blend of contemporary architecture, waterfront amenities, 
+                  and lush green spaces with stunning views of Melbourne's CBD skyline.
+                </p>
+              </div>
+            </Card>
+
+            {/* Secondary Renders Grid */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="overflow-hidden hover:shadow-xl transition-all">
+                <img 
+                  src={renderMasterPlan} 
+                  alt="East Werribee master plan showing residential and commercial zones"
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-foreground">Strategic Master Plan</h3>
+                  <p className="text-muted-foreground">
+                    Thoughtfully zoned precincts for residential, commercial, and recreational spaces 
+                    connected by modern infrastructure.
+                  </p>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-xl transition-all">
+                <img 
+                  src={renderPrecinctView} 
+                  alt="East Werribee precinct overview showing urban development and waterways"
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-foreground">Integrated Urban Design</h3>
+                  <p className="text-muted-foreground">
+                    A vibrant community featuring mixed-use developments, waterfront living, 
+                    and extensive public amenities.
+                  </p>
+                </div>
               </Card>
             </div>
           </div>
