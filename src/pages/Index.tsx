@@ -9,6 +9,7 @@ import commercialImage from "@/assets/commercial.jpg";
 import renderAerialView from "@/assets/render-aerial-view.png";
 import renderMasterPlan from "@/assets/render-master-plan.png";
 import renderPrecinctView from "@/assets/render-precinct-view.png";
+import halpLogo from "@/assets/halp-logo.png";
 
 const Index = () => {
   const handleContactClick = () => {
@@ -21,8 +22,8 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="flex items-center justify-between h-20">
-            <div className="flex items-center gap-2">
-              <Building2 className="w-8 h-8 text-primary" />
+            <div className="flex items-center gap-3">
+              <img src={halpLogo} alt="HALP Logo" className="h-12 w-12" />
               <span className="text-2xl font-bold text-foreground">East Werribee</span>
             </div>
             <nav className="hidden md:flex items-center gap-8">
@@ -464,7 +465,10 @@ const Index = () => {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">East Werribee</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <img src={halpLogo} alt="HALP Logo" className="h-12 w-12" />
+                <h3 className="text-2xl font-bold">East Werribee</h3>
+              </div>
               <p className="opacity-80">
                 Victoria's largest business precinct and premier residential destination.
               </p>
