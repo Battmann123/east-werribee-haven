@@ -23,7 +23,7 @@ const Index = () => {
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-2">
               <Building2 className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-bold text-foreground">Kororoit</span>
+              <span className="text-2xl font-bold text-foreground">East Werribee</span>
             </div>
             <nav className="hidden md:flex items-center gap-8">
               <button
@@ -42,7 +42,7 @@ const Index = () => {
                 onClick={() => document.getElementById('why-choose')?.scrollIntoView({ behavior: 'smooth' })}
                 className="text-foreground hover:text-primary transition-colors"
               >
-                Why Choose Kororoit
+                Why Choose East Werribee
               </button>
               <Button 
                 onClick={handleContactClick}
