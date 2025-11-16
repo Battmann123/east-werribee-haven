@@ -17,25 +17,63 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Header Navigation */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="flex items-center justify-between h-20">
+            <div className="flex items-center gap-2">
+              <Building2 className="w-8 h-8 text-primary" />
+              <span className="text-2xl font-bold text-foreground">Kororoit</span>
+            </div>
+            <nav className="hidden md:flex items-center gap-8">
+              <button
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                About
+              </button>
+              <button
+                onClick={() => document.getElementById('master-plan')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Master Plan
+              </button>
+              <button
+                onClick={() => document.getElementById('why-choose')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Why Choose Kororoit
+              </button>
+              <Button 
+                onClick={handleContactClick}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                Contact
+              </Button>
+            </nav>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
         
         <div className="relative z-10 container mx-auto px-6 max-w-7xl">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-6">
               <MapPin className="w-4 h-4" />
               <span className="text-sm font-medium">Victoria's Largest Business Precinct</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight">
               Welcome to<br />East Werribee
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
               Discover exceptional opportunities in Victoria's fastest-growing community. 
               Your future home and business destination awaits.
             </p>
@@ -51,7 +89,7 @@ const Index = () => {
                 size="lg" 
                 variant="outline"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2"
+                className="border-2 border-white text-white hover:bg-white hover:text-foreground"
               >
                 Learn More
               </Button>
@@ -110,7 +148,7 @@ const Index = () => {
       </section>
 
       {/* Vision & Development Section */}
-      <section className="py-24 bg-background">
+      <section id="master-plan" className="py-24 bg-background">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
@@ -348,7 +386,7 @@ const Index = () => {
       </section>
 
       {/* Why East Werribee Section */}
-      <section className="py-24 bg-muted/50">
+      <section id="why-choose" className="py-24 bg-muted/50">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
