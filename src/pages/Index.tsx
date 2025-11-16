@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, MapPin, Building2, Home, Briefcase, School, ShoppingBag, Trees, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-east-werribee.jpg";
 import landEstatesImage from "@/assets/land-estates.jpg";
 import buildersImage from "@/assets/builders.jpg";
@@ -387,9 +388,9 @@ const Index = () => {
           </div>
           <div className="border-t border-background/20 pt-8 text-center opacity-80">
             <div className="flex flex-wrap justify-center gap-2 mb-3">
-              <a href="#" onClick={handleContactClick} className="hover:opacity-100 transition-opacity">Terms of Use</a>
+              <Link to="/terms-of-use" className="hover:opacity-100 transition-opacity">Terms of Use</Link>
               <span>|</span>
-              <a href="#" onClick={handleContactClick} className="hover:opacity-100 transition-opacity">Privacy Policy</a>
+              <Link to="/privacy-policy" className="hover:opacity-100 transition-opacity">Privacy Policy</Link>
               <span>|</span>
               <a href="#" onClick={handleContactClick} className="hover:opacity-100 transition-opacity">Contact Us</a>
             </div>
